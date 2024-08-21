@@ -1,4 +1,4 @@
-### Proyecto Ficticio de una Tienda de Catering
+# Proyecto Ficticio de una Tienda de Catering
 
 Este proyecto ha sido realizado para la materia Programación Web 1 de la Tecnicatura en Programación de la UCES. Se trata de una landing page para un e-commerce de viandas y servicios de catering.
 
