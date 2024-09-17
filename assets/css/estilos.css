@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* HEADER     */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: white;
+  font-weight: bold;
+  font-size: 1.7vw;
+  z-index: 1;
+}
+
+.logo img {
+  width: 70px;
+  height: auto;
+  margin: 10px 40px;
+}
+
+.contenedorNav {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  box-sizing: border-box;
+  padding-right: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: rgb(103, 103, 103);
+  text-decoration: none;
+  margin: 20px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: rgb(37, 37, 37);
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contenedorCarrito img {
+  width: 50px;
+  height: auto;
+}
+
+/* PORTADA */
+.contenedor-portada {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.contenedor-portada img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.texto-portada {
+  color: aqua;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  cursor: default;
+}
+
+.texto-portada h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.texto-portada h2 {
+  font-size: 1.2em;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* nosotros */
+#nosotros {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+.titulo-nosotros {
+  font-size: xx-large;
+}
+.contenedor-nosotros {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10px;
+}
+.contenedor-nosotros p {
+  flex: 1;
+  text-align: justify;
+  padding: 5px 10px 5px 20px;
+  line-height: 2.5;
+}
+/*servicios*/
+#servicios {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.formulario-servicios {
+  margin: 40px;
+  background-color: rgb(211, 211, 211);
+  border-radius: 20px;
+}
+.rounded-input {
+  margin: 20px;
+  border: 2px solid #3498db;
+  border-radius: 20px;
+  padding: 12px;
+  width: 300px;
+}
+.boton-formulario {
+  background-color: #04aa6d;
+  font-weight: bold;
+  color: black;
+  border-color: #007e24;
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+  font: arial, sans-serif;
+  text-shadow: none;
+  margin: 10px;
+}
+.boton-formulario:hover {
+  background-color: #46a049;
+}
+
+/*viandas*/
+#viandas {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  text-align: center;
+}
+.titulo-viandas {
+  font-size: xx-large;
+  padding: 10px;
+}
+
+.tabla-viandas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+.tarjeta-viandas {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  width: 350px;
+  border: 1px solid #ccc;
+}
+.tarjeta-viandas p {
+  text-align: justify;
+  padding: 10px;
+}
+
+.tarjeta-viandas button {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+/*footer*/
+.footer{
+  background-color: #212529;
+  padding: 20px;
+  color: white;
+  text-align: center;
+
+}
+.contacto{
+  list-style-type: none;
+  padding: 15px;
+}
+.contacto li {
+  padding:5px;
+}
+.contacto a{
+  text-decoration: none;
+
+  color: white;
+}
+.logo-footer{
+  background-color: white;
+
+}
+
+@media (max-width: 768px) {
+  /* HEADER */
+  .logo img {
+    width: 40px;
+    margin: 3px 7px;
+  }
+  nav ul {
+    margin-right: 10px;
+  }
+  nav ul li a {
+    margin: 0px;
+  }
+  .contenedorCarrito img {
+    width: 20px;
+    height: auto;
+  }
+  /* PORTADA */
+  .contenedor-portada {
+    margin-top: 43px;
+  }
+  /*nosotros*/
+  .contenedor-nosotros {
+    display: block;
+  }
+  .contenedor-nosotros p {
+    padding: 0px 10px 0px 20px;
+  }
+  /*servicios*/
+  .rounded-input {
+    margin: 5px;
+  }
+}

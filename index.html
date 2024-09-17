@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Maximiliano Caprioglio" />
     <title>Catering Capri</title>
 
     <!-- metas para mejorar el seo -->
     <!-- proporcionar una descripción breve y concisa del contenido de la página web (es lo que muestra cuando apararece en una busqueda en el explorador)-->
-    <meta name="description"
-        content="Catering, nos dedicamos a brindar servicios de catering y preparacion de viandas para eventos. Contamos con personal capacitado para brindar la mejor experiencia." />
+    <meta
+      name="description"
+      content="Catering, nos dedicamos a brindar servicios de catering y preparacion de viandas para eventos. Contamos con personal capacitado para brindar la mejor experiencia."
+    />
     <!-- especificar una lista de palabras clave relacionadas con el contenido de la página web -->
-    <meta name="keywords" content="catering, viandas, servicio de catering, comidas para eventos, eventos sociales" />
+    <meta
+      name="keywords"
+      content="catering, viandas, servicio de catering, comidas para eventos, eventos sociales"
+    />
     <!-- indicar a los motores de búsqueda cómo deben interactuar con una página web específica. En este caso no rastree -->
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow" />
     <!-- la ubicacion -->
-    <meta name="geo.region" content="AR">
+    <meta name="geo.region" content="AR" />
     <!-- es la direccion correcta, principalmente es para decirle de todos los index y que sea por htpps si es segura la web. en este caso no va 
     <link rel="canonical" href="">
     -->
@@ -27,177 +31,310 @@
     <meta property="og:url" content="">
     <meta property="og:imagen" content="">
     -->
-</head>
-
-<body>
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos.css" />
+  </head>
+  <body>
     <header id="inicio">
-        <!-- logo lado izquiero y acceso a inicio -->
-        <a href="#inicio" rel="noopener noreferrer">
-            <img src="assets/img/logo.png" alt="logo de Il Mago" width="100" height="100">
-        </a>
-        <!-- navbar que se hace hamburgueza -->
+      <!-- logo lado izquiero y acceso a inicio -->
+      <a href="#inicio" rel="noopener noreferrer" class="logo">
+        <img src="assets/img/logo.png" alt="logo de Il Mago" />
+      </a>
+      <!-- navbar que se hace hamburgueza -->
+      <div class="contenedorNav">
         <nav>
-            <ul>
-                <li><a href="#nosotros" rel="noopener noreferrer">Nosotros</a></li>
-                <li><a href="#servicios" rel="noopener noreferrer">Servicios</a></li>
-                <li><a href="#viandas" rel="noopener noreferrer">Viendas</a></li>
-            </ul>
+          <ul>
+            <li><a href="#nosotros" rel="noopener noreferrer">Nosotros</a></li>
+            <li>
+              <a href="#servicios" rel="noopener noreferrer">Servicios</a>
+            </li>
+            <li><a href="#viandas" rel="noopener noreferrer">Viendas</a></li>
+          </ul>
         </nav>
         <!-- carrito de compras de viandas -->
-        <img src="assets/img/carrito.png" width="100" height="100" alt="Carrito">
+        <a href="" class="contenedorCarrito">
+          <img src="assets/img/carrito.png" alt="Carrito" />
+        </a>
+      </div>
     </header>
     <main>
-        <!-- foto de portada de presentacion  con un h1 y h2 sobre la foto -->
-        <section>
-            <img src="assets/img/portada4.png" alt="Portada" width="100%" height="100%">
+      <!-- foto de portada de presentacion  con un h1 y h2 sobre la foto -->
+      <section>
+        <div class="contenedor-portada">
+          <img src="assets/img/portada4.png" alt="Portada" />
+          <div class="texto-portada">
             <h1>Catering</h1>
-            <h2>Il Mago</h2>
-        </section>
+            <h2>Capri</h2>
+          </div>
+        </div>
+      </section>
 
-        <!-- quienes somos -->
-        <section id="nosotros">
-            <h2>Nosotros</h2>
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta! Eius, sapiente impedit, nam
-                    incidunt maiores excepturi obcaecati ut quisquam quas earum deserunt quasi et quidem inventore.
-                    Beatae,
-                    a asperiores!
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, accusamus! Dicta natus quam explicabo
-                    in sint. Perspiciatis omnis, assumenda harum animi, possimus ducimus, quidem ipsum aut reiciendis
-                    doloremque nam eligendi?
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde quidem, nobis soluta incidunt
-                    aspernatur eius iure ad ipsa. Iusto cupiditate magnam nisi quasi accusamus neque, error adipisci
-                    quam ut?
-                </p>
-            </div>
-        </section>
-        <!-- imagen de fondo que va en el background (para separar nosotros y dar inicio a servicio) y se mueve mas lento que el scrool con frace en el centro -->
-        <section>
-            <img src="assets/img/portada.png" alt="Portada" width="100%" height="100%">
-        </section>
-        <!-- Servicios para comprar -->
-        <section id="servicios">
-            <h2>Servicios de catering</h2>
-            <h3>Complete el formulario para cotizar el servicio y reciba por mail el presupuesto dentro de las 48hs.
-            </h3>
-            <form action="procesar.php" method="post">
-                <label for="name">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <br>
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label for="ubicacion">Ubicacion:</label>
-                <select id="ubicacion" name="ubicacion" required>
-                    <option value="caba">Ciudad Autonoma</option>
-                    <option value="norte">Zona Norte</option>
-                    <option value="sur">Zona Sur</option>
-                    <option value="oeste">Zona Oeste</option>
-                    <option value="mas">Mas de 20km</option>
-                </select>
-                <br>
-                <label for="cantidad">Cantidad de comensales:</label>
-                <input type="number" id="cantidad" name="cantidad" required>
-                <br>
-                <label for="seleccion">Seleccione los servicios a incluir:</label>
-                <input type="checkbox" id="entrada" name="seleccion" value="entrada">
-                <label for="entrada">Entrada</label><br>
-                <input type="checkbox" id="parrilla" name="seleccion" value="parrilla">
-                <label for="parrilla">Parrilla</label><br>
-                <input type="checkbox" id="platos_varios" name="seleccion" value="platos_varios">
-                <label for="platos_varios">Platos Vegetarianos</label><br>
-                <input type="checkbox" id="pescados" name="seleccion" value="pescados">
-                <label for="pescados">Pescados</label><br>
-                <input type="checkbox" id="minutas" name="seleccion" value="minutas">
-                <label for="minutas">Minutas</label><br>
-                <input type="checkbox" id="pizzas" name="seleccion" value="pizza">
-                <label for="pizza">Pizza a la parrilla</label><br>
-                <label for="message">Mensaje:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
-                <br>
-                <input type="submit" value="Presupuestar">
-            </form>
-        </section>
-        <!-- imagen de fondo que va en el background y se mueve mas lento que el scrool con frace en el centro -->
-        <section>
-            <img src="assets/img/portada4.png" alt="Portada" width="100%" height="100%">
-        </section>
-        <!-- vienadas para comprar -->
-        <section id="viandas">
-            <h2>Viandas</h2>
-            <table>
-                <tr>
-                    <td><img src="assets/img/productos/pizza.png" alt="Imagen del producto"></td>
-                    <td>Pizza a la leña x4</td>
-                    <td>Pack que incluye 4 sabores (Muzarella c/albaca - Napolitana s/ajo - Jamon y muzarella -
-                        Roquefor)</td>
-                    <td>$40.000.-</td>
-                    <td><button>Comprar</button></td>
-                </tr>
-                <tr>
-                    <td><img src="assets/img/productos/canelones.png" alt="Imagen del producto"></td>
-                    <td>Canelones x24</td>
-                    <td>Canelones rellenos de vegetales y mariscos</td>
-                    <td>$30.000.-</td>
-                    <td><button>Comprar</button></td>
-                </tr>
-                <tr>
-                    <td><img src="assets/img/productos/pastel.png" alt="Imagen del producto"></td>
-                    <td>Pastel de carne 1kg</td>
-                    <td>Paste de carne par 4 comensales rellenos de carne premiun y queso chear</td>
-                    <td>$25.000.-</td>
-                    <td><button>Comprar</button></td>
-                </tr>
-                <tr>
-                    <td><img src="assets/img/productos/ravioles.png" alt="Imagen del producto"></td>
-                    <td>Ravioles x40</td>
-                    <td>Ravioles rellenos de verduras y calamar, con salsa de tomates de huerta</td>
-                    <td>$20.000.-</td>
-                    <td><button>Comprar</button></td>
-                </tr>
-                <tr>
-                    <td><img src="assets/img/productos/tabla.png" alt="Imagen del producto"></td>
-                    <td>Tabla de fiabres</td>
-                    <td>Tabla de Fiambres para 4 comensales, contiene 4 quesos, jamon cocido, jamon crudo, salame serrano, morron y aceitunas</td>
-                    <td>$33.000.-</td>
-                    <td><button>Comprar</button></td>
-                </tr>
-            </table>
-        </section>
-        <!-- medios de pagos y por ahi un mini mapa que marque el plano de caba y gran buenos aires-->
-        <section>
-        </section>
+      <!-- quienes somos -->
+      <section id="nosotros">
+        <h2 class="titulo-nosotros">Nosotros</h2>
+        <div class="contenedor-nosotros">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+            dicta! Eius, <b>sapiente impedit</b>, nam incidunt maiores excepturi
+            obcaecati ut quisquam quas earum deserunt quasi et quidem inventore.
+            Beatae, a asperiores! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quam, dicta! Eius, sapiente impedit, nam incidunt
+            maiores excepturi obcaecati ut quisquam quas earum deserunt quasi et
+            quidem inventore. Beatae, a asperiores!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+            accusamus! Dicta natus quam explicabo in sint. Perspiciatis omnis,
+            assumenda <b>harum animi</b>, possimus ducimus, quidem ipsum aut
+            reiciendis doloremque nam eligendi? Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Ipsam unde quidem, nobis soluta
+            incidunt aspernatur eius <b>iure ad ipsa</b>. Iusto cupiditate
+            magnam nisi quasi accusamus neque, error adipisci quam ut?
+          </p>
+        </div>
+      </section>
+      <!-- imagen de fondo que va en el background (para separar nosotros y dar inicio a servicio) y se mueve mas lento que el scrool con frace en el centro -->
+      <section>
+        <img
+          src="assets/img/portada.png"
+          alt="Portada"
+          width="100%"
+          height="100%"
+        />
+      </section>
+      <!-- Servicios para comprar -->
+      <section id="servicios">
+        <h2>Servicios de catering</h2>
+        <h5>
+          Complete el formulario para cotizar el servicio y reciba por mail el
+          presupuesto dentro de las 48hs.
+        </h5>
+        <div class="formulario-servicios">
+          <form action="procesar.php" method="post">
+            <input
+              type="text"
+              class="rounded-input"
+              id="nombre"
+              name="nombre"
+              placeholder="Nombre"
+              required
+            />
+            <input
+              type="text"
+              class="rounded-input"
+              id="email"
+              name="email"
+              placeholder="Correo Electrónico"
+              required
+            />
+
+            <br />
+            <label for="ubicacion">Ubicacion:</label>
+            <select id="ubicacion" name="ubicacion" required>
+              <option value="caba">Ciudad Autonoma</option>
+              <option value="norte">Zona Norte</option>
+              <option value="sur">Zona Sur</option>
+              <option value="oeste">Zona Oeste</option>
+              <option value="mas">Mas de 20km</option>
+            </select>
+            <br />
+            <label for="cantidad">Cantidad de comensales:</label>
+            <input type="number" id="cantidad" name="cantidad" required />
+            <br />
+            <label for="seleccion">Seleccione los servicios a incluir:</label>
+            <br />
+            <input
+              type="checkbox"
+              id="entrada"
+              name="seleccion"
+              value="entrada"
+            />
+            <label for="entrada">Entrada</label>
+            <br />
+            <input
+              type="checkbox"
+              id="parrilla"
+              name="seleccion"
+              value="parrilla"
+            />
+            <label for="parrilla">Parrilla</label><br />
+            <input
+              type="checkbox"
+              id="platos_varios"
+              name="seleccion"
+              value="platos_varios"
+            />
+            <label for="platos_varios">Platos Vegetarianos</label><br />
+            <input
+              type="checkbox"
+              id="pescados"
+              name="seleccion"
+              value="pescados"
+            />
+            <label for="pescados">Pescados</label><br />
+            <input
+              type="checkbox"
+              id="minutas"
+              name="seleccion"
+              value="minutas"
+            />
+            <label for="minutas">Minutas</label><br />
+            <input type="checkbox" id="pizzas" name="seleccion" value="pizza" />
+            <label for="pizza">Pizza a la parrilla</label><br />
+            <label for="message">Mensaje:</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              cols="50"
+              required
+            ></textarea>
+            <br />
+            <input
+              type="submit"
+              value="Presupuestar"
+              class="boton-formulario"
+            />
+          </form>
+        </div>
+      </section>
+      <!-- imagen de fondo que va en el background y se mueve mas lento que el scrool con frace en el centro -->
+      <section>
+        <img
+          src="assets/img/portada4.png"
+          alt="Portada"
+          width="100%"
+          height="100%"
+        />
+      </section>
+      <!-- vienadas para comprar -->
+      <section id="viandas">
+        <h2 class="titulo-viandas">Viandas</h2>
+        <div class="tabla-viandas">
+          <div class="tarjeta-viandas">
+            <img
+              src="assets/img/productos/pizza.png"
+              alt="Imagen del producto"
+              width="100%"
+              height="auto"
+            />
+            <h4>Pizza a la leña x4</h4>
+            <p>
+              Pack que incluye 4 sabores (Muzarella c/albaca - Napolitana s/ajo
+              - Jamon y muzarella - Roquefor)
+            </p>
+            <p>$40.000.-</p>
+            <button>Comprar</button>
+          </div>
+          <div class="tarjeta-viandas">
+            <img
+              src="assets/img/productos/canelones.png"
+              alt="Imagen del producto"
+              width="100%"
+              height="auto"
+            />
+            <h4>Canelones x24</h4>
+            <p>Canelones rellenos de vegetales y mariscos</p>
+            <p>$30.000.-</p>
+            <button>Comprar</button>
+          </div>
+          <div class="tarjeta-viandas">
+            <img
+              src="assets/img/productos/pastel.png"
+              alt="Imagen del producto"
+              width="100%"
+              height="auto"
+            />
+            <h4>Pastel de carne 1kg</h4>
+            <p>
+              Paste de carne par 4 comensales rellenos de carne premiun y queso
+              chear
+            </p>
+            <p>$25.000.-</p>
+            <button>Comprar</button>
+          </div>
+          <div class="tarjeta-viandas">
+            <img
+              src="assets/img/productos/ravioles.png"
+              alt="Imagen del producto"
+              width="100%"
+              height="auto"
+            />
+            <h4>Ravioles x40</h4>
+            <p>
+              Ravioles rellenos de verduras y calamar, con salsa de tomates de
+              huerta
+            </p>
+            <p>$20.000.-</p>
+            <button>Comprar</button>
+          </div>
+          <div class="tarjeta-viandas">
+            <img
+              src="assets/img/productos/tabla.png"
+              alt="Imagen del producto"
+              width="100%"
+              height="auto"
+            />
+            <h4>Tabla de fiabres</h4>
+            <p>
+              Tabla de Fiambres para 4 comensales, contiene 4 quesos, jamon
+              cocido, jamon crudo, salame serrano, morron y aceitunas
+            </p>
+            <p>$33.000.-</p>
+            <button>Comprar</button>
+          </div>
+        </div>
+      </section>
+      <!-- medios de pagos y por ahi un mini mapa que marque el plano de caba y gran buenos aires-->
+      <section></section>
     </main>
-    <footer>
-        <!-- logo centrado y mas chico que el de inicio -->
-        <img src="assets/img/logo.png" width="70" height="70" alt="logo">
-        <!-- redes sociales, contacto y ubicacion (no va a ir instagram sino el simbolo y el nombre de la cuenta tel o direccion)-->
-        <ul>
-            <li>
-                <a href="" rel="noopener noreferrer">Instagram</a>
-            </li>
-            <li>
-                <a href="mailto: " target="_blank" rel="noopener noreferrer">mail</a>
-            </li>
-            <li>
-                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">whatsapp</a>
-            </li>
-            <li>
-                <a href="https://goo.gl/maps/" target="_blank" rel="noopener noreferrer">direccion</a>
-            </li>
-        </ul>
-        <!-- un boton para pasar la web de español a ingles y de ingles a español para darle mas nivel -->
-        <button>
+    <footer class="footer">
+      <!-- logo centrado y mas chico que el de inicio -->
+      <img
+        src="assets/img/logo.png"
+        class="logo-footer"
+        width="70"
+        height="70"
+        alt="logo"
+      />
+      <!-- redes sociales, contacto y ubicacion (no va a ir instagram sino el simbolo y el nombre de la cuenta tel o direccion)-->
+      <ul class="contacto">
+        <li>
+          <a href="" rel="noopener noreferrer">Instagram</a>
+        </li>
+        <li>
+          <a href="mailto: " target="_blank" rel="noopener noreferrer">mail</a>
+        </li>
+        <li>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer"
+            >whatsapp</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://goo.gl/maps/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >direccion</a
+          >
+        </li>
+        <li>
+          <!-- un boton para pasar la web de español a ingles y de ingles a español para darle mas nivel -->
+          <button>
             <p>Ver en Inglés</p>
-        </button>
-        <!-- copyrigth By caprioglio-->
-        <p>© 2024 Copyright | by Caprioglio Maximiliano</p>
+          </button>
+        </li>
+      </ul>
+      <!-- copyrigth By caprioglio-->
+      <p>© 2024 Copyright | by Caprioglio Maximiliano</p>
     </footer>
     <!-- acceso a whatsapp lado derecho inferior , que se vea siempre -->
     <a>
-        <img src="assets/img/whatsapp.png" alt="whatsapp" width="70" height="70">
+      <img
+        src="assets/img/whatsapp.png"
+        alt="whatsapp"
+        width="70"
+        height="70"
+      />
     </a>
-</body>
-
+  </body>
 </html>
