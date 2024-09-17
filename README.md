@@ -7,6 +7,7 @@ El objetivo es contar con un sitio web que muestre la historia de la empresa, su
 
 ## Tecnologías Utilizadas
 - HTML
+- CSS
 
 ## Funcionalidades Previstas
 - Realizar pedidos.
