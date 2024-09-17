@@ -40,7 +40,7 @@
         <img src="assets/img/logo.png" alt="logo de Il Mago" />
       </a>
       <!-- navbar que se hace hamburgueza -->
-      <div class="contenedorNav">
+      <div class="contenedor-nav">
         <nav>
           <ul>
             <li><a href="#nosotros" rel="noopener noreferrer">Nosotros</a></li>
@@ -51,7 +51,7 @@
           </ul>
         </nav>
         <!-- carrito de compras de viandas -->
-        <a href="" class="contenedorCarrito">
+        <a href="" class="contenedor-carrito">
           <img src="assets/img/carrito.png" alt="Carrito" />
         </a>
       </div>
@@ -108,94 +108,87 @@
           Complete el formulario para cotizar el servicio y reciba por mail el
           presupuesto dentro de las 48hs.
         </h5>
-        <div class="formulario-servicios">
-          <form action="procesar.php" method="post">
-            <input
-              type="text"
-              class="rounded-input"
-              id="nombre"
-              name="nombre"
-              placeholder="Nombre"
-              required
-            />
-            <input
-              type="text"
-              class="rounded-input"
-              id="email"
-              name="email"
-              placeholder="Correo Electrónico"
-              required
-            />
-
-            <br />
-            <label for="ubicacion">Ubicacion:</label>
-            <select id="ubicacion" name="ubicacion" required>
-              <option value="caba">Ciudad Autonoma</option>
-              <option value="norte">Zona Norte</option>
-              <option value="sur">Zona Sur</option>
-              <option value="oeste">Zona Oeste</option>
-              <option value="mas">Mas de 20km</option>
-            </select>
-            <br />
-            <label for="cantidad">Cantidad de comensales:</label>
-            <input type="number" id="cantidad" name="cantidad" required />
-            <br />
-            <label for="seleccion">Seleccione los servicios a incluir:</label>
-            <br />
-            <input
-              type="checkbox"
-              id="entrada"
-              name="seleccion"
-              value="entrada"
-            />
-            <label for="entrada">Entrada</label>
-            <br />
-            <input
-              type="checkbox"
-              id="parrilla"
-              name="seleccion"
-              value="parrilla"
-            />
-            <label for="parrilla">Parrilla</label><br />
-            <input
-              type="checkbox"
-              id="platos_varios"
-              name="seleccion"
-              value="platos_varios"
-            />
-            <label for="platos_varios">Platos Vegetarianos</label><br />
-            <input
-              type="checkbox"
-              id="pescados"
-              name="seleccion"
-              value="pescados"
-            />
-            <label for="pescados">Pescados</label><br />
-            <input
-              type="checkbox"
-              id="minutas"
-              name="seleccion"
-              value="minutas"
-            />
-            <label for="minutas">Minutas</label><br />
-            <input type="checkbox" id="pizzas" name="seleccion" value="pizza" />
-            <label for="pizza">Pizza a la parrilla</label><br />
-            <label for="message">Mensaje:</label><br />
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              cols="50"
-              required
-            ></textarea>
-            <br />
-            <input
-              type="submit"
-              value="Presupuestar"
-              class="boton-formulario"
-            />
-          </form>
-        </div>
+        <form action="procesar.php" method="post">
+          <input
+            type="text"
+            class="rounded-input"
+            id="nombre"
+            name="nombre"
+            placeholder="Nombre"
+            required
+          />
+          <input
+            type="text"
+            class="rounded-input"
+            id="email"
+            name="email"
+            placeholder="Correo Electrónico"
+            required
+          />
+          <br />
+          <label for="ubicacion">Ubicacion:</label>
+          <select id="ubicacion" name="ubicacion" required>
+            <option value="caba">Ciudad Autonoma</option>
+            <option value="norte">Zona Norte</option>
+            <option value="sur">Zona Sur</option>
+            <option value="oeste">Zona Oeste</option>
+            <option value="mas">Mas de 20km</option>
+          </select>
+          <br />
+          <label for="cantidad">Cantidad de comensales:</label>
+          <input type="number" id="cantidad" name="cantidad" required />
+          <br />
+          <label for="seleccion">Seleccione los servicios a incluir:</label>
+          <br />
+          <input
+            type="checkbox"
+            id="entrada"
+            name="seleccion"
+            value="entrada"
+          />
+          <label for="entrada">Entrada</label>
+          <br />
+          <input
+            type="checkbox"
+            id="parrilla"
+            name="seleccion"
+            value="parrilla"
+          />
+          <label for="parrilla">Parrilla</label><br />
+          <input
+            type="checkbox"
+            id="platos_varios"
+            name="seleccion"
+            value="platos_varios"
+          />
+          <label for="platos_varios">Platos Vegetarianos</label><br />
+          <input
+            type="checkbox"
+            id="pescados"
+            name="seleccion"
+            value="pescados"
+          />
+          <label for="pescados">Pescados</label><br />
+          <input
+            type="checkbox"
+            id="minutas"
+            name="seleccion"
+            value="minutas"
+          />
+          <label for="minutas">Minutas</label><br />
+          <input type="checkbox" id="pizzas" name="seleccion" value="pizza" />
+          <label for="pizza">Pizza a la parrilla</label><br />
+          <label for="message">Mensaje:</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="50"
+            required
+          ></textarea>
+          <br />
+          <input type="submit" value="Presupuestar" class="boton-formulario" />
+        </form>
       </section>
       <!-- imagen de fondo que va en el background y se mueve mas lento que el scrool con frace en el centro -->
       <section>
@@ -328,16 +321,15 @@
       <p>© 2024 Copyright | by Caprioglio Maximiliano</p>
     </footer>
     <!-- acceso a whatsapp lado derecho inferior , que se vea siempre -->
-  <div  class="whatsapp">
-    <a>
-      <img
-        src="assets/img/whatsapp.png"
-        alt="whatsapp"
-        width="70"
-        height="70"
-      />
-    </a>
-  
-  </div>  
+    <div class="whatsapp">
+      <a>
+        <img
+          src="assets/img/whatsapp.png"
+          alt="whatsapp"
+          width="70"
+          height="70"
+        />
+      </a>
+    </div>
   </body>
 </html>

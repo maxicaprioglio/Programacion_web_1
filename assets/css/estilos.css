@@ -24,7 +24,7 @@ header {
   margin: 10px 40px;
 }
 
-.contenedorNav {
+.contenedor-nav {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   box-sizing: border-box;
@@ -54,7 +54,7 @@ nav ul li a:hover {
   transition: box-shadow 0.3s ease-in-out;
 }
 
-.contenedorCarrito img {
+.contenedor-carrito img {
   width: 50px;
   height: auto;
 }
@@ -124,10 +124,13 @@ nav ul li a:hover {
   padding: 20px;
 }
 
-.formulario-servicios {
+#servicios {
   margin: 40px;
   background-color: rgb(211, 211, 211);
   border-radius: 20px;
+}
+#servicios h2,h5{
+  padding: 10px;
 }
 .rounded-input {
   margin: 20px;
