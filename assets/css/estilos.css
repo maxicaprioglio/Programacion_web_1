@@ -192,28 +192,32 @@ nav ul li a:hover {
 }
 
 /*footer*/
-.footer{
+.footer {
   background-color: #212529;
   padding: 20px;
   color: white;
   text-align: center;
-
 }
-.contacto{
+.contacto {
   list-style-type: none;
   padding: 15px;
 }
 .contacto li {
-  padding:5px;
+  padding: 5px;
 }
-.contacto a{
+.contacto a {
   text-decoration: none;
 
   color: white;
 }
-.logo-footer{
+.logo-footer {
   background-color: white;
-
+}
+/*whatsapp*/
+.whatsapp{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
 @media (max-width: 768px) {
