@@ -121,26 +121,64 @@ nav ul li a:hover {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
+  font-size: 14PX;
   padding: 20px;
-}
-
-#servicios {
-  margin: 40px;
+  margin: 40px 30%;
   background-color: rgb(211, 211, 211);
   border-radius: 20px;
 }
 #servicios h2,h5{
   padding: 10px;
 }
-.rounded-input {
-  margin: 20px;
-  border: 2px solid #3498db;
-  border-radius: 20px;
-  padding: 12px;
-  width: 300px;
+#servicios form {
+  display: grid;
+  justify-content: center;
+
 }
+.form-grupo{
+  text-align: left;
+  clear: both;
+  margin-bottom: 15px;
+  font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+}
+.form-grupo label {
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.form-grupo input 
+{
+  width: 100%;
+  padding: 5px 0px;
+}
+
+.form-grupo textarea {
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 10px; 
+  resize: vertical; 
+}
+
+.form-checkbox{
+  display: block;
+  justify-content: center;
+  margin: 10px 40px;
+
+}
+
+
+.form-grupo-checkbox{
+
+  display: inline-block;
+  margin-right: 10px;
+  
+}
+
 .boton-formulario {
-  background-color: #04aa6d;
+  justify-self: center;
+    background-color: #04aa6d;
   font-weight: bold;
   color: black;
   border-color: #007e24;
@@ -252,7 +290,15 @@ nav ul li a:hover {
     padding: 0px 10px 0px 20px;
   }
   /*servicios*/
-  .rounded-input {
-    margin: 5px;
+  #servicios{
+    
+  margin: 10px;
   }
+ 
+}
+@media (max-width: 1050px) {
+  #servicios{
+    
+    margin: 40px;
+    }
 }
