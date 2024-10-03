@@ -8,6 +8,8 @@ El objetivo es contar con un sitio web que muestre la historia de la empresa, su
 ## Tecnologías Utilizadas
 - HTML
 - CSS
+- bootstrap@5.0.2 local
+- bootstrap@5.0.2 js cdn
 
 ## Funcionalidades Previstas
 - Realizar pedidos.
