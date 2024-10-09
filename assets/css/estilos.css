@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* HEADER     */
+.imgNavbar {
+  width: 50px;
+}
+.letras {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.contenedor-carrito img {
+  width: 50px;
+  height: auto;
+}
+
+/* PORTADA */
+.contenedor-portada {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.contenedor-portada img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.texto-portada {
+  color: aqua;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  cursor: default;
+}
+
+.texto-portada h1 {
+  font-size: 5vw;
+  margin-bottom: 10px;
+}
+
+.texto-portada h2 {
+  font-size: 3vw;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* nosotros */
+#nosotros {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 20px 5px;
+}
+.titulo-nosotros {
+  font-size: 5vw;
+}
+.contenedor-nosotros {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10px;
+}
+.contenedor-nosotros p {
+  flex: 1;
+  text-align: justify;
+  padding: 5px 10px 5px 20px;
+  line-height: 2.5;
+}
+/*servicios*/
+#servicios {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 14PX;
+  padding: 20px;
+  margin: 40px 30%;
+  background-color: rgb(211, 211, 211);
+  border-radius: 20px;
+}
+#servicios h2,h5{
+  padding: 10px;
+}
+#servicios form {
+  display: grid;
+  justify-content: center;
+
+}
+.form-grupo{
+  text-align: left;
+  clear: both;
+  margin-bottom: 15px;
+  font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+}
+.form-grupo label {
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.form-grupo input 
+{
+  width: 100%;
+  padding: 5px 0px;
+}
+
+.form-grupo textarea {
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 10px; 
+  resize: vertical; 
+}
+
+.form-checkbox{
+  display: block;
+  justify-content: center;
+  margin: 10px 40px;
+
+}
+
+
+.form-grupo-checkbox{
+
+  display: inline-block;
+  margin-right: 10px;
+  
+}
+
+.boton-formulario {
+  justify-self: center;
+    background-color: #04aa6d;
+  font-weight: bold;
+  color: black;
+  border-color: #007e24;
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+  font: arial, sans-serif;
+  text-shadow: none;
+  margin: 10px;
+}
+.boton-formulario:hover {
+  background-color: #46a049;
+}
+
+/*viandas*/
+#viandas {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  text-align: center;
+}
+.titulo-viandas {
+  font-size: xx-large;
+  padding: 10px;
+}
+
+.tabla-viandas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+.tarjeta-viandas {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  width: 350px;
+  border: 1px solid #ccc;
+}
+.tarjeta-viandas p {
+  text-align: justify;
+  padding: 10px;
+}
+
+.tarjeta-viandas button {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  background-color: black;
+  border-radius: 5px;
+}
+/*ubicacion*/
+.fondo-ubicacion{
+  background-color:#cecece 
+}
+
+
+/*footer*/
+.footer {
+  background-color: #212529;
+  color: white;
+}
+.contacto {
+  list-style-type: none;
+  padding-left: 0px;
+}
+.contacto a {
+  text-decoration: none;
+  color: white;
+}
+.contacto li {
+margin: 5px 0px;
+}
+.contacto p {
+  margin: 5px 0px;
+  }
+.logo-footer {
+  margin-top: 10px;
+  background-color: white;
+}
+/*whatsapp*/
+.whatsapp{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  /* HEADER */
+  .logo img {
+    width: 40px;
+    margin: 3px 7px;
+  }
+  nav ul {
+    margin-right: 10px;
+  }
+  nav ul li a {
+    margin: 0px;
+  }
+  .contenedorCarrito img {
+    width: 20px;
+    height: auto;
+  }
+  /* PORTADA */
+  .contenedor-portada {
+    margin-top: 83px;
+  }
+  
+  /*nosotros*/
+  .contenedor-nosotros {
+    display: block;
+  }
+  .contenedor-nosotros p {
+    padding: 0px 10px 0px 20px;
+  }
+  /*servicios*/
+  #servicios{
+    
+  margin: 10px;
+  }
+ 
+}
+@media (max-width: 1050px) {
+  #servicios{
+    
+    margin: 40px;
+    }
+}
