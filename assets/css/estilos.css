@@ -41,12 +41,12 @@
 }
 
 .texto-portada h1 {
-  font-size: 3em;
+  font-size: 5vw;
   margin-bottom: 10px;
 }
 
 .texto-portada h2 {
-  font-size: 1.2em;
+  font-size: 3vw;
   max-width: 80%;
   margin: 0 auto;
 }
@@ -56,10 +56,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
-  padding: 40px;
+  padding: 20px 5px;
 }
 .titulo-nosotros {
-  font-size: xx-large;
+  font-size: 5vw;
 }
 .contenedor-nosotros {
   display: flex;
@@ -242,8 +242,9 @@ margin: 5px 0px;
   }
   /* PORTADA */
   .contenedor-portada {
-    margin-top: 43px;
+    margin-top: 83px;
   }
+  
   /*nosotros*/
   .contenedor-nosotros {
     display: block;
