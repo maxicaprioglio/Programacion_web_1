@@ -8,7 +8,6 @@
 }
 .letras {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 .contenedor-carrito img {
   width: 50px;
@@ -76,77 +75,50 @@
 #servicios {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
-  font-size: 14PX;
+  font-size: 14px;
   padding: 20px;
   margin: 40px 30%;
   background-color: rgb(211, 211, 211);
   border-radius: 20px;
 }
-#servicios h2,h5{
+#servicios h2,
+h5 {
   padding: 10px;
+  text-align: center;
 }
 #servicios form {
   display: grid;
   justify-content: center;
-
 }
-.form-grupo{
+.form-grupo {
   text-align: left;
   clear: both;
   margin-bottom: 15px;
   font-size: 12px;
-    font-weight: 300;
-    line-height: 20px;
+  font-weight: 300;
+  line-height: 20px;
 }
 .form-grupo label {
   text-transform: uppercase;
   width: 100%;
 }
 
-.form-grupo input 
-{
+.form-grupo input {
   width: 100%;
   padding: 5px 0px;
 }
 
 .form-grupo textarea {
-  width: 100%; 
-  box-sizing: border-box; 
-  padding: 10px; 
-  resize: vertical; 
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  resize: vertical;
 }
 
-.form-checkbox{
+.form-checkbox {
   display: block;
   justify-content: center;
   margin: 10px 40px;
-
-}
-
-
-.form-grupo-checkbox{
-
-  display: inline-block;
-  margin-right: 10px;
-  
-}
-
-.boton-formulario {
-  justify-self: center;
-    background-color: #04aa6d;
-  font-weight: bold;
-  color: black;
-  border-color: #007e24;
-  border-radius: 5px;
-  height: 50px;
-  width: 100px;
-  font: arial, sans-serif;
-  text-shadow: none;
-  margin: 10px;
-}
-.boton-formulario:hover {
-  background-color: #46a049;
 }
 
 /*viandas*/
@@ -189,10 +161,9 @@
   border-radius: 5px;
 }
 /*ubicacion*/
-.fondo-ubicacion{
-  background-color:#cecece 
+.fondo-ubicacion {
+  background-color: #cecece;
 }
-
 
 /*footer*/
 .footer {
@@ -208,17 +179,17 @@
   color: white;
 }
 .contacto li {
-margin: 5px 0px;
+  margin: 5px 0px;
 }
 .contacto p {
   margin: 5px 0px;
-  }
+}
 .logo-footer {
   margin-top: 10px;
   background-color: white;
 }
 /*whatsapp*/
-.whatsapp{
+.whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -244,24 +215,22 @@ margin: 5px 0px;
   .contenedor-portada {
     margin-top: 83px;
   }
-  
+
   /*nosotros*/
   .contenedor-nosotros {
     display: block;
   }
   .contenedor-nosotros p {
     padding: 0px 10px 0px 20px;
+    line-height: 1.5;
   }
   /*servicios*/
-  #servicios{
-    
-  margin: 10px;
+  #servicios {
+    margin: 10px;
   }
- 
 }
 @media (max-width: 1050px) {
-  #servicios{
-    
+  #servicios {
     margin: 40px;
-    }
+  }
 }

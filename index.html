@@ -123,22 +123,26 @@
         <h2 class="titulo-nosotros">Nosotros</h2>
         <div class="contenedor-nosotros">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-            dicta! Eius, <b>sapiente impedit</b>, nam incidunt maiores excepturi
-            obcaecati ut quisquam quas earum deserunt quasi et quidem inventore.
-            Beatae, a asperiores! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quam, dicta! Eius, sapiente impedit, nam incidunt
-            maiores excepturi obcaecati ut quisquam quas earum deserunt quasi et
-            quidem inventore. Beatae, a asperiores!
+            <b>Capri Catering</b> es una empresa familiar que nació en el
+            corazón de una pequeña cocina hogareña. Todo comenzó hace más de 15
+            años cuando <b>Ana</b> y <b>Pablo</b>, dos apasionados de la
+            gastronomía, decidieron fusionar su amor por la comida con el deseo
+            de brindar a otros experiencias culinarias inolvidables. Lo que
+            empezó como un pequeño emprendimiento preparando viandas caseras
+            para amigos y vecinos, creció rápidamente gracias a la dedicación y
+            la calidad que siempre se destacaron en cada uno de sus platos.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-            accusamus! Dicta natus quam explicabo in sint. Perspiciatis omnis,
-            assumenda <b>harum animi</b>, possimus ducimus, quidem ipsum aut
-            reiciendis doloremque nam eligendi? Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Ipsam unde quidem, nobis soluta
-            incidunt aspernatur eius <b>iure ad ipsa</b>. Iusto cupiditate
-            magnam nisi quasi accusamus neque, error adipisci quam ut?
+            Nos dedicamos a crear menús personalizados y adaptados a las
+            necesidades de cada cliente. Ya sea que se trate de un pequeño
+            evento familiar o de una gran celebración corporativa, nuestro
+            equipo está comprometido a ofrecer platos que no solo sorprendan por
+            su presentación, sino también por su sabor único. Además, hemos
+            perfeccionado un servicio de viandas que ofrece opciones para todos
+            los gustos y dietas: vegetarianas, sin gluten, bajas en calorías y
+            más. Cada vianda está cuidadosamente elaborada, pensando no solo en
+            el sabor, sino también en la nutrición y el bienestar de quienes nos
+            eligen.
           </p>
         </div>
       </section>
@@ -193,62 +197,68 @@
             <label for="cantidad">Cantidad de comensales:</label>
             <input type="number" id="cantidad" name="cantidad" required />
           </div>
-          <div class="form-grupo">
+          <div class="container">
             <label for="seleccion">Seleccione los servicios a incluir:</label>
-            <div class="form-checkbox">
-              <div class="form-grupo-checkbox">
-                <label for="entrada">Entrada</label>
+            <div class="container my-2">
+              <div class="form-check ">
                 <input
+                  class="form-check-input"
                   type="checkbox"
                   id="entrada"
                   name="seleccion"
                   value="entrada"
                 />
+                <label class="form-check-label" for="entrada">Entrada</label>
               </div>
-              <div class="form-grupo-checkbox">
-                <label for="parrilla">Parrilla</label><br />
+              <div class="form-check">
+                <label class="form-check-label" for="parrilla">Parrilla</label>
                 <input
-                  type="checkbox"
+                class="form-check-input"
+                type="checkbox"
                   id="parrilla"
                   name="seleccion"
                   value="parrilla"
                 />
               </div>
               <div class="form-grupo-checkbox">
-                <label for="platos_varios">Platos Vegetarianos</label><br />
                 <input
-                  type="checkbox"
+                class="form-check-input"
+                type="checkbox"
                   id="platos_varios"
                   name="seleccion"
                   value="platos_varios"
                 />
+                <label class="form-check-label" for="platos_varios">Platos Vegetarianos</label>
               </div>
               <div class="form-grupo-checkbox">
-                <label for="pescados">Pescados</label><br />
                 <input
-                  type="checkbox"
+                class="form-check-input"
+                type="checkbox"
                   id="pescados"
                   name="seleccion"
                   value="pescados"
                 />
+                <label class="form-check-label" for="pescados">Pescados</label>
               </div>
               <div class="form-grupo-checkbox">
-                <label for="minutas">Minutas</label><br />
                 <input
-                  type="checkbox"
+                class="form-check-input"
+                type="checkbox"
                   id="minutas"
                   name="seleccion"
                   value="minutas"
                 />
+                <label class="form-check-label" for="minutas">Minutas</label>
               </div>
               <div class="form-grupo-checkbox">
-                <label for="pizza">Pizza a la parrilla</label><br />
                 <input
-                  type="checkbox"
+                class="form-check-input"
+                type="checkbox"
                   id="pizzas"
                   name="seleccion"
                   value="pizza"
                 />
+                <label class="form-check-label" for="pizza">Pizza a la parrilla</label>
               </div>
             </div>
           </div>
@@ -262,7 +272,7 @@
               required
             ></textarea>
           </div>
-          <input type="submit" value="Presupuestar" class="boton-formulario" />
+          <input type="submit" value="Presupuestar" class="btn btn-success" />
         </form>
       </section>
       <!-- imagen de fondo que va en el background y se mueve mas lento que el scrool con frace en el centro -->
