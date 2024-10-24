@@ -1,5 +1,5 @@
 let carritoArray = [];
-class Producto {
+export class Producto {
   constructor(id, titulo, precio, cantidad) {
     this.id = id;
     this.titulo = titulo;
@@ -59,5 +59,3 @@ class Producto {
     });
   }
 }
-
-export default Producto;
