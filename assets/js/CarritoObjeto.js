@@ -1,6 +1,6 @@
 let carrito = {};
 
-function agregarProducto(id, titulo, precio, cantidad) {
+export function agregarProducto(id, titulo, precio, cantidad) {
   if (carrito[id]) {
     carrito[id].cantidad += cantidad;
   } else {
@@ -13,7 +13,7 @@ function agregarProducto(id, titulo, precio, cantidad) {
   console.log("el producto se agrego al carrito");
 }
 
-function sumarProducto(id) {
+export function sumarProducto(id) {
   if (carrito[id]) {
     carrito[id].cantidad++;
     console.log("el producto se agrego al carrito");
@@ -22,7 +22,7 @@ function sumarProducto(id) {
   }
 }
 
-function restarProducto(id) {
+export function restarProducto(id) {
   if (carrito[id]) {
     if (carrito[id].cantidad == 1) {
       delete carrito[id];
@@ -35,7 +35,7 @@ function restarProducto(id) {
   }
 }
 
-function eliminarProducto(id) {
+export function eliminarProducto(id) {
   if (carrito[id]) {
     delete carrito[id];
     console.log("el producto se elimino correctamente");
@@ -44,7 +44,7 @@ function eliminarProducto(id) {
   }
 }
 
-function mostrarCarrito() {
+export function mostrarCarrito() {
   console.log("Carrito de compras:");
   for (let id in carrito) {
     let producto = carrito[id];
@@ -54,10 +54,3 @@ function mostrarCarrito() {
   }
 }
 
-export default {
-  agregarProducto,
-  sumarProducto,
-  restarProducto,
-  eliminarProducto,
-  mostrarCarrito
-};

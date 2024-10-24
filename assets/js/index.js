@@ -1,12 +1,12 @@
-import { FormularioServicio } from "FormularioServicio.js";
+import { FormularioServicio } from "./FormularioServicio.js";
 import {
   agregarProducto,
   sumarProducto,
   restarProducto,
   eliminarProducto,
   mostrarCarrito,
-} from "CarritoObjeto.js";
-import { Producto } from "carritoArray.js";
+} from "./CarritoObjeto.js";
+import { Producto } from "./CarritoArray.js";
 
 console.log("bienvenido, le solicitamos datos del formulario!");
 let datos = new FormularioServicio().SolicitarDatos();

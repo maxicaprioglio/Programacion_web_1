@@ -1,4 +1,4 @@
-class FormularioServicio {
+export class FormularioServicio {
     constructor(
       nombre,
       email,
@@ -195,5 +195,3 @@ class FormularioServicio {
       );
     }
   }
-
-  export default FormularioServicio;
