@@ -23,12 +23,13 @@ mostrarCarrito();
 eliminarProducto(1);
 
 //usamos el carrito Array
-Producto.agregarProductoArray(1, "pastel", 25000, 5);
-Producto.agregarProductoArray(2, "Canelones", 30000, 3);
-Producto.mostrarCarritoArray();
-Producto.restarProductoArray(1);
-Producto.mostrarCarritoArray();
-Producto.sumarProductoArray(2);
-Producto.mostrarCarritoArray();
-Producto.eliminarProductoArray(1);
-Producto.mostrarCarritoArray();
+const carrito = new Producto();
+carrito.agregarProductoArray(1, "pastel", 25000, 5);
+carrito.agregarProductoArray(2, "Canelones", 30000, 3);
+carrito.mostrarCarritoArray();
+carrito.restarProductoArray(1);
+carrito.mostrarCarritoArray();
+carrito.sumarProductoArray(2);
+carrito.mostrarCarritoArray();
+carrito.eliminarProductoArray(1);
+carrito.mostrarCarritoArray();
