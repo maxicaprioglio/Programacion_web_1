@@ -8,6 +8,7 @@ El objetivo es contar con un sitio web que muestre la historia de la empresa, su
 ## Tecnologías Utilizadas
 - HTML
 - CSS
+- JS
 - bootstrap @ 5.0.2 local
 - bootstrap @ 5.0.2 js cdn
 
@@ -18,5 +19,5 @@ El objetivo es contar con un sitio web que muestre la historia de la empresa, su
 - cambio idioma (español-Ingles)
 
 ## Versiones
-V1.0.0 (2024-10-09) 
-V1.0.1 (2024-10-19)
+- V1.0.0 (2024-10-09)
+- V1.0.1 (2024-10-19)
