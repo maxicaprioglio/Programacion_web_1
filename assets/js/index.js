@@ -1,35 +1,33 @@
+import { Carrito } from "./Carrito.js";
+import { Producto } from "./Producto.js";
 import { FormularioServicio } from "./FormularioServicio.js";
-import {
-  agregarProducto,
-  sumarProducto,
-  restarProducto,
-  eliminarProducto,
-  mostrarCarrito,
-} from "./CarritoObjeto.js";
-import { Producto } from "./CarritoArray.js";
+
+const carrito = new Carrito();
+const producto1 = new Producto(1,"imagen01.jpg" ,"pastel", "Un pastel enorme con todo lo que se necesita",25000, 5);
+const producto2 = new Producto(2,"imagen01.jpg" ,"pastel", "Un pastel enorme con todo lo que se necesita",25000, 5);
+
+
+carrito.AgregarProducto(producto1);
+carrito.MostrarProductos();
+carrito.AgregarProducto(producto2);
+carrito.MostrarProductos();
+carrito.AgregarProducto(new Producto(1,"imagen01.jpg" ,"pastel", "Un pastel enorme con todo lo que se necesita",25000, 5));
+carrito.MostrarProductos();
+carrito.DescontarProducto(2);
+carrito.MostrarProductos();
+carrito.DescontarProducto(2);
+carrito.MostrarProductos();
+carrito.DescontarProducto(2);
+carrito.MostrarProductos();
+carrito.DescontarProducto(2);
+carrito.MostrarProductos();
+carrito.DescontarProducto(2);
+carrito.MostrarProductos();
+carrito.EliminarProducto(2);
+carrito.MostrarProductos();
+carrito.EliminarProducto(1);
+carrito.MostrarProductos();
 
 console.log("bienvenido, le solicitamos datos del formulario!");
-let datos = new FormularioServicio().SolicitarDatos();
-datos.MostrarMensaje();
-
-//usamos el carrito objeto
-agregarProducto(1, "pastel", 25000, 5);
-agregarProducto(2, "Canelones", 30000, 3);
-mostrarCarrito();
-restarProducto(1);
-mostrarCarrito();
-sumarProducto(2);
-mostrarCarrito();
-eliminarProducto(1);
-
-//usamos el carrito Array
-const carrito = new Producto();
-carrito.agregarProductoArray(1, "pastel", 25000, 5);
-carrito.agregarProductoArray(2, "Canelones", 30000, 3);
-carrito.mostrarCarritoArray();
-carrito.restarProductoArray(1);
-carrito.mostrarCarritoArray();
-carrito.sumarProductoArray(2);
-carrito.mostrarCarritoArray();
-carrito.eliminarProductoArray(1);
-carrito.mostrarCarritoArray();
+let datos = new FormularioServicio().solicitarDatos();
+datos.mostrarDatos();
