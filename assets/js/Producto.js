@@ -8,11 +8,11 @@ export class Producto {
     this.cantidad = cantidad;
   }
 
-  SumarProducto() {
+  sumarProducto() {
     this.cantidad++;
   }
 
-  RestarProducto() {
+  restarProducto() {
     this.cantidad--;
   }
 }
