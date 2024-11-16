@@ -4,7 +4,7 @@ export class Carrito {
     this.productos = [];
   }
 
-  AgregarProducto(producto) {
+  agregarProducto(producto) {
     if (producto instanceof Producto) {
       if (this.productos.some((objeto) => objeto.id === producto.id)) {
         const productoBuscado = this.productos.find(
@@ -19,7 +19,7 @@ export class Carrito {
     }
   }
 
-  DescontarProducto(id) {
+ descontarProducto(id) {
     const productoBuscado = this.productos.find((objeto) => objeto.id === id);
     if (productoBuscado) {
       if (productoBuscado.cantidad === 1) {
@@ -34,7 +34,7 @@ export class Carrito {
     }
   }
 
-  EliminarProducto(id) {
+  eliminarProducto(id) {
     const productoBuscado = this.productos.find((item) => item.id === id);
     if (productoBuscado) {
       this.productos = this.productos.filter((item) => item.id !== id);
@@ -44,7 +44,7 @@ export class Carrito {
     }
   }
 
-  MostrarProductos() {
+  mostrarProductos() {
     console.log(this.productos);
   }
 }

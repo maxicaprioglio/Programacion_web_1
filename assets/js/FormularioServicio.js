@@ -9,11 +9,11 @@ export class FormularioServicio {
   }
 
   solicitarDatos() {
-    const nombre = this.SolicitarNombre();
-    const email = this.SolicitarEmail();
-    const ubicacion = this.SolicitarUbicacion();
-    const cantidad = this.SolicitarCantidad();
-    const servicio = this.SolicitarServicio();
+    const nombre = this.solicitarNombre();
+    const email = this.solicitarEmail();
+    const ubicacion = this.solicitarUbicacion();
+    const cantidad = this.solicitarCantidad();
+    const servicio = this.solicitarServicio();
     const message = prompt("Mensaje:");
 
     let datosFormulario = new FormularioServicio(
@@ -29,7 +29,7 @@ export class FormularioServicio {
     return datosFormulario;
   }
 
-  SolicitarNombre() {
+  solicitarNombre() {
     let valorNombre = "";
     do {
       valorNombre = prompt("Ingrese Su nombre: ");
@@ -40,7 +40,7 @@ export class FormularioServicio {
     return valorNombre;
   }
 
-  SolicitarEmail() {
+  solicitarEmail() {
     let scope;
     let valorEmail = "";
     do {
@@ -56,7 +56,7 @@ export class FormularioServicio {
     return valorEmail;
   }
 
-  SolicitarUbicacion() {
+  solicitarUbicacion() {
     let scope;
     let valorUbicacion;
     do {
@@ -93,7 +93,7 @@ export class FormularioServicio {
     return valorUbicacion;
   }
 
-  SolicitarCantidad() {
+  solicitarCantidad() {
     let scope;
     let valorCantidad;
     do {
@@ -113,7 +113,7 @@ export class FormularioServicio {
     return valorCantidad;
   }
 
-  SolicitarServicio() {
+  solicitarServicio() {
     const valorServicio = [];
     let valorEntrada = prompt(
       "El servicio viene con: entrada? no 'precione enter', si 'marque algo y presione enter' "
