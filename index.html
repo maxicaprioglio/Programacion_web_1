@@ -21,22 +21,14 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- la ubicacion -->
     <meta name="geo.region" content="AR" />
-    <!-- es la direccion correcta, principalmente es para decirle de todos los index y que sea por htpps si es segura la web. en este caso no va 
-    <link rel="canonical" href="">
-    -->
-    <!-- no creo que sea necesario. protocolo Open Graph / creado por facebook para los buscadores de meta si se hace publicidad serviria mas, es el cuadro que figura en sus busquedas con la fotos. 
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:type" content="business.business" />
-    <meta property="og:description" content="Brindamos servicios de Catering y venta de viandas para eventos.">
-    <meta property="og:url" content="">
-    <meta property="og:imagen" content="">
-    -->
+    
     <link rel="stylesheet" type="text/css" href="assets/css/estilos.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="assets/css/Bootstrap.min.css"
     />
+    <script defer type="module" src="assets/js/index.js"></script>
   </head>
   <body>
     <header id="inicio">
@@ -98,8 +90,15 @@
                 </li>
               </ul>
             </div>
-            <a href="" class="contenedor-carrito">
-              <img src="assets/img/carrito.png" alt="Carrito" />
+            <a
+              class="btn btn-light"
+              data-bs-toggle="modal"
+              data-bs-target="#cartModal"
+            >
+              <div class="cart-container">
+                <img src="assets/img/carrito.png" alt="Carrito" />
+                <div class="cart-badge" id="cantCarrito"></div>
+              </div>
             </a>
           </div>
         </div>
@@ -162,7 +161,7 @@
           Complete el formulario para cotizar el servicio y reciba por mail el
           presupuesto dentro de las 48hs.
         </h5>
-        <form action="procesar.php" method="post">
+        <form id="formulario">
           <div class="form-grupo">
             <label for="nombre">Nombre:</label>
             <input
@@ -198,9 +197,9 @@
             <input type="number" id="cantidad" name="cantidad" required />
           </div>
           <div class="container">
-            <label for="seleccion">Seleccione los servicios a incluir:</label>
+            <h2>Seleccione los servicios a incluir:</h2>
             <div class="container my-2">
-              <div class="form-check ">
+              <div class="form-check">
                 <input
                   class="form-check-input"
                   type="checkbox"
@@ -213,8 +212,8 @@
               <div class="form-check">
                 <label class="form-check-label" for="parrilla">Parrilla</label>
                 <input
-                class="form-check-input"
-                type="checkbox"
+                  class="form-check-input"
+                  type="checkbox"
                   id="parrilla"
                   name="seleccion"
                   value="parrilla"
@@ -222,18 +221,20 @@
               </div>
               <div class="form-grupo-checkbox">
                 <input
-                class="form-check-input"
-                type="checkbox"
+                  class="form-check-input"
+                  type="checkbox"
                   id="vegetariano"
                   name="seleccion"
                   value="vegetariano"
                 />
-                <label class="form-check-label" for="vegetariano">Platos Vegetarianos</label>
+                <label class="form-check-label" for="vegetariano"
+                  >Platos Vegetarianos</label
+                >
               </div>
               <div class="form-grupo-checkbox">
                 <input
-                class="form-check-input"
-                type="checkbox"
+                  class="form-check-input"
+                  type="checkbox"
                   id="pescados"
                   name="seleccion"
                   value="pescados"
@@ -242,8 +243,8 @@
               </div>
               <div class="form-grupo-checkbox">
                 <input
-                class="form-check-input"
-                type="checkbox"
+                  class="form-check-input"
+                  type="checkbox"
                   id="minutas"
                   name="seleccion"
                   value="minutas"
@@ -252,13 +253,15 @@
               </div>
               <div class="form-grupo-checkbox">
                 <input
-                class="form-check-input"
-                type="checkbox"
-                  id="pizzas"
+                  class="form-check-input"
+                  type="checkbox"
+                  id="pizza"
                   name="seleccion"
                   value="pizza"
                 />
-                <label class="form-check-label" for="pizza">Pizza a la parrilla</label>
+                <label class="form-check-label" for="pizza"
+                  >Pizza a la parrilla</label
+                >
               </div>
             </div>
           </div>
@@ -272,7 +275,7 @@
               required
             ></textarea>
           </div>
-          <input type="submit" value="Presupuestar" class="btn btn-success" />
+          <button type="submit" class="btn btn-success">Presupuestar</button> 
         </form>
       </section>
       <!-- imagen de fondo que va en el background y se mueve mas lento que el scrool con frace en el centro -->
@@ -295,13 +298,21 @@
               width="100%"
               height="auto"
             />
-            <h4>Pizza a la leña x4</h4>
-            <p>
+            <h4 class="mt-3">Pizza a la leña x4</h4>
+            <p class="mx-2 mb-1">
               Pack que incluye 4 sabores (Muzarella c/albaca - Napolitana s/ajo
               - Jamon y muzarella - Roquefor)
             </p>
-            <p>$40.000.-</p>
-            <button>Comprar</button>
+            <p class="mx-2 mb-1">$40.000.-</p>
+            <button
+              class="btn-enviar"
+              data-id="1"
+              data-foto="pizza"
+              data-titulo="Pizza a la leña x4"
+              data-precio="40000"
+            >
+              Comprar
+            </button>
           </div>
           <div class="tarjeta-viandas">
             <img
@@ -310,10 +321,18 @@
               width="100%"
               height="auto"
             />
-            <h4>Canelones x24</h4>
-            <p>Canelones rellenos de vegetales y mariscos</p>
-            <p>$30.000.-</p>
-            <button>Comprar</button>
+            <h4 class="mt-3">Canelones x24</h4>
+            <p class="mx-2 mb-1">Canelones rellenos de vegetales y mariscos</p>
+            <p class="mx-2 mb-1">$30.000.-</p>
+            <button
+              class="btn-enviar"
+              data-id="2"
+              data-foto="canelones"
+              data-titulo="Canelones x24"
+              data-precio="30000"
+            >
+              Comprar
+            </button>
           </div>
           <div class="tarjeta-viandas">
             <img
@@ -322,13 +341,21 @@
               width="100%"
               height="auto"
             />
-            <h4>Pastel de carne 1kg</h4>
-            <p>
+            <h4 class="mt-3">Pastel de carne 1kg</h4>
+            <p class="mx-2 mb-1">
               Paste de carne par 4 comensales rellenos de carne premiun y queso
               chear
             </p>
-            <p>$25.000.-</p>
-            <button>Comprar</button>
+            <p class="mx-2 mb-1">$25.000.-</p>
+            <button
+              class="btn-enviar"
+              data-id="3"
+              data-foto="pastel"
+              data-titulo="Pastel de carne 1kg"
+              data-precio="25000"
+            >
+              Comprar
+            </button>
           </div>
           <div class="tarjeta-viandas">
             <img
@@ -337,13 +364,21 @@
               width="100%"
               height="auto"
             />
-            <h4>Ravioles x40</h4>
-            <p>
+            <h4 class="mt-3">Ravioles x40</h4>
+            <p class="mx-2 mb-1">
               Ravioles rellenos de verduras y calamar, con salsa de tomates de
               huerta
             </p>
-            <p>$20.000.-</p>
-            <button>Comprar</button>
+            <p class="mx-2 mb-1">$20.000.-</p>
+            <button
+              class="btn-enviar"
+              data-id="4"
+              data-foto="ravioles"
+              data-titulo="Ravioles x40"
+              data-precio="20000"
+            >
+              Comprar
+            </button>
           </div>
           <div class="tarjeta-viandas">
             <img
@@ -352,13 +387,21 @@
               width="100%"
               height="auto"
             />
-            <h4>Tabla de fiabres</h4>
-            <p>
+            <h4 class="mt-3">Tabla de fiabres</h4>
+            <p class="mx-2 mb-1">
               Tabla de Fiambres para 4 comensales, contiene 4 quesos, jamon
               cocido, jamon crudo, salame serrano, morron y aceitunas
             </p>
-            <p>$33.000.-</p>
-            <button>Comprar</button>
+            <p class="mx-2 mb-1">$33.000.-</p>
+            <button
+              class="btn-enviar"
+              data-id="5"
+              data-foto="tabla"
+              data-titulo="Tabla de fiabres"
+              data-precio="33000"
+            >
+              Comprar
+            </button>
           </div>
         </div>
       </section>
@@ -474,12 +517,6 @@
               >direccion</a
             >
           </li>
-          <li>
-            <!-- un boton para pasar la web de español a ingles y de ingles a español para darle mas nivel cuando veamos java-->
-            <button>
-              <p>Ver en Inglés</p>
-            </button>
-          </li>
         </ul>
         <!-- copyrigth By caprioglio-->
         <p class="mb-0 pb-1">© 2024 Copyright | by Caprioglio Maximiliano</p>
@@ -500,11 +537,62 @@
         />
       </a>
     </div>
+
+    <!-- Modal cart -->
+    <div
+      class="modal fade"
+      id="cartModal"
+      tabindex="-1"
+      aria-labelledby="cartModalLabel"
+      aria-hidden="true"
+      role="dialog"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel">Lista de Compras</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body container-lg">
+            <table class="table table-striped align-middle">
+              <thead>
+                <tr class="text-center">
+                  <th scope="col">Foto</th>
+                  <th scope="col">Produto</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="text-center" id="listaCarrito">
+                
+              </tbody>
+            </table>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-success">Pagar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script defer type="module" src="assets/js/index.js"></script>
   </body>
 </html>
