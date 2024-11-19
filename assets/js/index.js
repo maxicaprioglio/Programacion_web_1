@@ -22,6 +22,13 @@ document.getElementById("formulario").addEventListener("submit", (event) => {
   for (let [key, value] of formData.entries()) {
     data.push(key, value);
   }
+  Swal.fire({
+    title:"Formulario enviado",
+    text: "A la brevedad le estaremos respondindo.",
+    icon: "success",
+    confirmButtonText: "Gracias"
+  })
   console.log(data);
-  // aca hay que hacer un fetch y mandarlo a algun lado
+   // aca hay que hacer un fetch y mandarlo a algun lado
+  event.target.reset(); 
 });
