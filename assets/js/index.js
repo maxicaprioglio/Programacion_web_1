@@ -2,6 +2,7 @@ import {
   agregarClickBotonesEnviar,
   agregarClickBotonesSumar,
   agregarClickBotonesRestar,
+  agregarBotonPagar
 } from "./buttonActions.js";
 
 import { cargarCantCarrito, cargarProductosTabla } from "./Carrito.js";
@@ -12,6 +13,7 @@ agregarClickBotonesEnviar();
 cargarProductosTabla(JSON.parse(localStorage.getItem("carrito")) ?? []);
 agregarClickBotonesRestar();
 agregarClickBotonesSumar();
+agregarBotonPagar();
 
 // formulario servicios
 
