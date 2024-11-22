@@ -1,9 +1,4 @@
-import {
-  agregarCarrito,
-  sacarCarrito,
-  sumarProductoTabla
-} from "./Carrito.js";
-
+import { agregarCarrito, sacarCarrito, sumarProductoTabla } from "./Carrito.js";
 
 export function agregarClickBotonesEnviar() {
   const botones = document.querySelectorAll(".btn-enviar");
@@ -43,5 +38,21 @@ export function agregarClickBotonesSumar() {
       agregarClickBotonesRestar();
       agregarClickBotonesSumar();
     });
+  });
+}
+
+export function agregarBotonPagar() {
+  document.getElementById("botonPagar").addEventListener("click", () => {
+    Swal.fire({
+      title: "Compra",
+      text: "A la brevedad nos estaremos comunicando.",
+      icon: "success",
+      confirmButtonText: "Gracias por su compra",
+    });
+    //actualizo carrito
+    localStorage.removeItem("carrito");
+    agregarCarrito(producto);
+    agregarClickBotonesRestar();
+    agregarClickBotonesSumar();
   });
 }
