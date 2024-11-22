@@ -21,7 +21,7 @@
     <meta name="robots" content="noindex, nofollow" />
     <!-- la ubicacion -->
     <meta name="geo.region" content="AR" />
-    
+
     <link rel="stylesheet" type="text/css" href="assets/css/estilos.css" />
     <link
       rel="stylesheet"
@@ -30,7 +30,6 @@
     />
     <script defer type="module" src="assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
   </head>
   <body>
     <header id="inicio">
@@ -269,14 +268,9 @@
           </div>
           <div class="form-grupo">
             <label for="message">Mensaje:</label><br />
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              cols="50"
-            ></textarea>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
           </div>
-          <button type="submit" class="btn btn-success">Presupuestar</button> 
+          <button type="submit" class="btn btn-success">Presupuestar</button>
         </form>
       </section>
       <!-- imagen de fondo que va en el background y se mueve mas lento que el scrool con frace en el centro -->
@@ -571,11 +565,14 @@
                   <th scope="col"></th>
                 </tr>
               </thead>
-              <tbody class="text-center" id="listaCarrito">
-                
-              </tbody>
+              <tbody class="text-center" id="listaCarrito"></tbody>
             </table>
-          </div>
+            <div id="totalContenedor">
+              <p class="text-end m-5">
+                <b>Total: $ <span id="total"></span>.-</b>
+              </p>
+            </div>
+           </div>
 
           <div class="modal-footer">
             <button
