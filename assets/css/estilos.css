@@ -217,6 +217,13 @@ h5 {
   right: 20px;
 }
 
+.visible{
+display: block;
+}
+.ocultar{
+display: none;
+}
+
 @media (max-width: 768px) {
   /* HEADER */
   .logo img {
