@@ -28,7 +28,7 @@
       type="text/css"
       href="assets/css/Bootstrap.min.css"
     />
-    <script defer type="module" src="assets/js/index.js"></script>
+    <script defer type="module" src="assets/js/Script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
@@ -563,11 +563,12 @@
                   <th scope="col">Cantidad</th>
                   <th scope="col"></th>
                   <th scope="col"></th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
               <tbody class="text-center" id="listaCarrito"></tbody>
             </table>
-            <div id="totalContenedor">
+            <div id="totalContenedor" class="ocultar">
               <p class="text-end m-5">
                 <b>Total: $ <span id="total"></span>.-</b>
               </p>
@@ -582,7 +583,7 @@
             >
               Cerrar
             </button>
-            <button type="button" class="btn btn-success" id="botonPagar">Pagar</button>
+            <button type="button" id="botonPagar" class="btn-success ocultar" >Pagar</button>
           </div>
         </div>
       </div>
