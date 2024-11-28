@@ -11,13 +11,15 @@ El objetivo es contar con un sitio web que muestre la historia de la empresa, su
 - JS
 - bootstrap @ 5.0.2 local
 - bootstrap @ 5.0.2 js cdn
+- AJAX
 
 ## Funcionalidades Previstas
 - Realizar pedidos.
 - Icono de WhatsApp visible.
 - Animaciones al recorrer la web.
-- cambio idioma (español-Ingles)
+- Carga de productos de una API
 
 ## Versiones
 - V1.0.0 (2024-10-09)
 - V1.0.1 (2024-10-19)
+- V1.1.0 (2024-11-28)
