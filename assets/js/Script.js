@@ -25,8 +25,22 @@ async function obtenerDatos() {
 
 document.addEventListener("DOMContentLoaded", () => {
   obtenerDatos()
-    .then(datos => productos.renderizarProductos(datos))
-    .catch(error => {
+    .then((datos) => productos.renderizarProductos(datos))
+    .then(() => {
+      const botones = document.querySelectorAll(".btn-enviar");
+      botones.forEach((boton) => {
+        boton.addEventListener("click", () => {
+          const producto = new Producto(
+            boton.dataset.id,
+            boton.dataset.foto,
+            boton.dataset.titulo,
+            boton.dataset.precio
+          );
+          carrito.agregar(producto);
+        });
+      });
+    })
+    .catch((error) => {
       productosContainer.innerHTML = `
         <li class="list-group-item text-danger">Error: ${error.message}</li>
       `;
