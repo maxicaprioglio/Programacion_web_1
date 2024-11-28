@@ -2,12 +2,44 @@ import { Carrito } from "./Carrito.js";
 import { Producto } from "./Producto.js";
 
 // viandas
+const productos = new Producto();
+const productosContainer = document.getElementById("productos");
+
+async function obtenerDatos() {
+  const API_URL = "https://67487dfa5801f51535912443.mockapi.io/Productos";
+  const spinner = document.getElementById("spinner");
+
+  spinner.style.display = "block";
+
+  return fetch(API_URL)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error al obtener los datos");
+      }
+      return response.json();
+    })
+    .finally(() => {
+      spinner.style.display = "none";
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  obtenerDatos()
+    .then(datos => productos.renderizarProductos(datos))
+    .catch(error => {
+      productosContainer.innerHTML = `
+        <li class="list-group-item text-danger">Error: ${error.message}</li>
+      `;
+    });
+});
+
+// carrito
 const carrito = new Carrito();
 
 carrito.actualizarCantidadAlCarritoVisual();
 carrito.renderizarProductosAlCarrito();
 
-/* click a las viandas */
+// click a las viandas
 const botones = document.querySelectorAll(".btn-enviar");
 botones.forEach((boton) => {
   boton.addEventListener("click", () => {
