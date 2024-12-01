@@ -170,6 +170,8 @@ export class Carrito {
         confirmButtonText: "Gracias por su compra",
       });
       localStorage.removeItem("carrito");
+      this.actualizarCantidadAlCarritoVisual()
+      this.renderizarProductosAlCarrito();
     });
   }
 }
