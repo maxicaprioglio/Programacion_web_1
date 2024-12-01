@@ -94,7 +94,7 @@ export class Carrito {
         fila.innerHTML = `
       <th scope="row">
         <img
-          src="assets/img/productos/${producto.foto}.png"
+          src="assets/img/productos/${producto.foto}"
           alt="Imagen del producto"
           width="50px"
           height="auto"
