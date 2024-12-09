@@ -9,6 +9,7 @@ export class Producto {
 
   renderizarProductos(datos) {
     const productosContainer = document.getElementById("productos");
+    productosContainer.innerHTML = "";
     datos.forEach((producto) => {
       
       const div = document.createElement("div");
