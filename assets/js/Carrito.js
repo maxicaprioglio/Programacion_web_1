@@ -1,13 +1,32 @@
+import { Producto } from "./Producto.js";
+
 export class Carrito {
   constructor() {
     this.productos = JSON.parse(localStorage.getItem("Carrito")) || [];
+
+    document.getElementById("botonPagar").addEventListener("click", () => {
+      Swal.fire({
+        title: "Compra",
+        text: "A la brevedad nos estaremos comunicando.",
+        icon: "success",
+        confirmButtonText: "Gracias por su compra",
+      });
+      localStorage.removeItem("Carrito");
+      this.productos = [];
+      this.actualizarCantidadAlCarritoVisual();
+      this.renderizarProductosAlCarrito();
+    });
+
+    this.actualizarCantidadAlCarritoVisual();
+    this.renderizarProductosAlCarrito();
   }
 
-  guardar() {
+  guardarProductosLocalStorage() {
     localStorage.setItem("Carrito", JSON.stringify(this.productos));
   }
 
-  agregar(producto) {
+  agregarProductoCarrito(producto) {
+
     this.productos.find((p) => p.id === producto.id)
       ? (this.productos = this.productos.map((p) =>
           p.id === producto.id ? { ...p, cantidad: p.cantidad + 1 } : p
@@ -15,11 +34,12 @@ export class Carrito {
       : this.productos.push({ ...producto, cantidad: 1 });
     this.actualizarCantidadAlCarritoVisual();
     this.renderizarProductosAlCarrito();
-    this.guardar();
-    agregarClickBotonesCarrito();
+    this.guardarProductosLocalStorage();
+    this.agregarClickBotonesCarrito();
   }
 
-  sumar(id) {
+  agregarProductoPorId(id) {
+
     if (this.productos.find((producto) => producto.id === id)) {
       this.productos = this.productos.map((producto) =>
         producto.id === id
@@ -28,11 +48,12 @@ export class Carrito {
       );
       this.actualizarCantidadAlCarritoVisual();
       this.renderizarProductosAlCarrito();
-      this.guardar();
+      this.guardarProductosLocalStorage();
     }
   }
 
-  descontar(id) {
+  descontarProductoPorId(id) {
+
     this.productos = this.productos.filter((producto) => {
       if (producto.id === id) {
         if (producto.cantidad > 1) {
@@ -46,10 +67,11 @@ export class Carrito {
     });
     this.actualizarCantidadAlCarritoVisual();
     this.renderizarProductosAlCarrito();
-    this.guardar();
+    this.guardarProductosLocalStorage();
   }
 
-  eliminar(id) {
+  eliminarProductoCarrito(id) {
+
     this.productos = this.productos.filter((producto) => {
       if (producto.id === id) {
         return false;
@@ -58,7 +80,8 @@ export class Carrito {
     });
     this.actualizarCantidadAlCarritoVisual();
     this.renderizarProductosAlCarrito();
-    this.guardar();
+    this.guardarProductosLocalStorage();
+
   }
 
   actualizarCantidadAlCarritoVisual() {
@@ -75,7 +98,6 @@ export class Carrito {
     const totalContenedor = document.getElementById("totalContenedor");
     const botonPagar = document.getElementById("botonPagar");
     const productosDelCarrito = document.getElementById("listaCarrito");
- 
     let totalVenta = 0;
 
     productosDelCarrito.innerHTML = "";
@@ -94,7 +116,8 @@ export class Carrito {
         fila.innerHTML = `
       <th scope="row">
         <img
-          src="assets/img/productos/${producto.foto}.png"
+          src="assets/img/productos/${producto.foto}"
+
           alt="Imagen del producto"
           width="50px"
           height="auto"
@@ -142,34 +165,46 @@ export class Carrito {
     botonesCarritoDescontar.forEach((boton) => {
       boton.addEventListener("click", () => {
         const id = boton.parentElement.id;
-        this.descontar(id);
+        this.descontarProductoPorId(id);
+        this.guardarProductosLocalStorage();
       });
     });
-  
+
+
     const botonesCarritoSumar = document.querySelectorAll(".btn-mas");
     botonesCarritoSumar.forEach((boton) => {
       boton.addEventListener("click", () => {
         const id = boton.parentElement.id;
-        this.sumar(id);
+        this.agregarProductoPorId(id);
+        this.guardarProductosLocalStorage();
       });
     });
-  
+
+
     const botonesCarritoEliminar = document.querySelectorAll(".btn-eliminar");
     botonesCarritoEliminar.forEach((boton) => {
       boton.addEventListener("click", () => {
         const id = boton.parentElement.id;
-        this.eliminar(id);
+        this.eliminarProductoCarrito(id);
+        this.guardarProductosLocalStorage();
       });
     });
-  
-    document.getElementById("botonPagar").addEventListener("click", () => {
-      Swal.fire({
-        title: "Compra",
-        text: "A la brevedad nos estaremos comunicando.",
-        icon: "success",
-        confirmButtonText: "Gracias por su compra",
+  }
+
+  agregarClickProductos() {
+    const botones = document.querySelectorAll(".btn-enviar");
+    botones.forEach((boton) => {
+      boton.addEventListener("click", () => {
+        const producto = new Producto(
+          boton.dataset.id,
+          boton.dataset.foto,
+          boton.dataset.titulo,
+          "",
+          boton.dataset.precio
+        );
+        this.agregarProductoCarrito(producto);
       });
-      localStorage.removeItem("carrito");
+
     });
   }
 }
