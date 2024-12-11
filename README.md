@@ -5,10 +5,10 @@ Profesor: Lic. Matias Velasquez<br>
 Año: 2024<br>
 
 ## Introducción
-Este proyecto ha sido realizado para la materia Programación Web 1 de la Tecnicatura Universitaria en Programación de Sistemas de la UCES. Se trata de una landing page para un e-commerce de viandas para eventos y servicios de catering.
+_Este proyecto ha sido realizado para la materia Programación Web 1 de la Tecnicatura Universitaria en Programación de Sistemas de la UCES. Se trata de una landing page para un e-commerce de viandas para eventos y servicios de catering._
 
 ## Objetivo
-El objetivo es desarrollar un sitio web que presente la historia de la empresa, detalle sus servicios y permita a los clientes realizar compras de viandas. Además, se busca optimizar el posicionamiento en Google y proporcionar un enlace directo a Google Maps.
+_El objetivo es desarrollar un sitio web que presente la historia de la empresa, detalle sus servicios y permita a los clientes realizar compras de viandas. Además, se busca optimizar el posicionamiento en Google y proporcionar un enlace directo a Google Maps._
 
 ## Funcionalidades Previstas
 - Realizar pedidos.
