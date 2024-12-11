@@ -13,7 +13,7 @@ export class Producto {
     datos.forEach((producto) => {
       
       const div = document.createElement("div");
-      div.className = "tarjeta-viandas";
+      div.className = "tarjeta-viandas imgefecto";
 
       div.innerHTML = `
         <img
