@@ -223,7 +223,30 @@ display: block;
 .ocultar{
 display: none;
 }
+/* efecto que aparecen los productos */
+@keyframes showefecto {
+  from {
+      opacity: 0;
+      scale: 25%;
+  }
 
+  to {
+      opacity: 1;
+      scale: 100%;
+  }
+}
+.imgefecto {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: showefecto;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+/* media */
 @media (max-width: 768px) {
   /* HEADER */
   .logo img {
